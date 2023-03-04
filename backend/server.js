@@ -31,6 +31,4 @@ const PORT = 4000; // full caps signify a config variable
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)
-app.listen(PORT, function () {
-	console.log(` http://localhost:${PORT}`);
-});
+app.use('/api', routes)
