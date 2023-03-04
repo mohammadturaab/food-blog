@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/mohammadturaab/food-blog.git",
-  "author": "Mohammad Turaab <45646831+mohammadturaab@users.noreply.github.com>",
+  "author": "Mohammad Turaab",
   "license": "MIT",
   "private": true,
   "workspaces": [
     "frontend",
     "backend",
-    "package/*"
+    "packages/*"
   ],
   "scripts": {
     "start": "yarn --cwd server start",
@@ -19,6 +19,6 @@
     "build": "yarn --cwd client build && mv ./client/build ./server/build"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "concurrently": "^7.0.0"
   }
 }

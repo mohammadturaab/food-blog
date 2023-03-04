@@ -1,46 +1,36 @@
-const path = require("path")
-require("dotenv").config({path: "../.env"})
-// require('dotenv').config()
+/* ====== External Modules  ====== */
+// Required External Modules
+// all required code that is not our own
+const express = require('express');
 
-/* ==== External Modules ==== */
-const express = require("express");
-const cors = require("cors")
-/* ==== Internal Modules ==== */
 
-/* ==== Instanced Modules  ==== */
+/* ====== Internal Modules  ====== */
+// Required Internal Modules
+// all code that is our code
+
+
+/* ====== Instanced Module  ====== */
+// Create the Express app
 const app = express();
-const routes = require("./routes");
-/* ==== Configuration ==== */
-const config = require("@react/config");
+// returns an object that is our server
 
-/* ==== Middleware ==== */
-
-app.use(express.static(path.join("build")))
-// //this helps us read the body, req.body also works with Postman
-app.use(express.urlencoded({extended: true}))
-// //parse some json :)))
-app.use(express.json())
-app.use(cors())
-
-/* ====  Routes & Controllers  ==== */
-app.use("/api", routes)
-app.get('/favicon.ico', function(req,res){
-    res.send("404");
-  })
-app.all("/api/*", (req, res, next) => {
- 	res.send("HOLD UP THESE ARE NOT THE APIS YOU ARE LOOKING FOR")
- })
-//SUPER AMAZING MAGICAL MONOREPO FULL STACK MIDDLEWARE
-//This targets all routes that aren't specified by our specific server routes that are not "/api"
-//ANY REQUESTS not covered by our routes will get piped into this middleware! This literally hands over control to React
-app.use((req, res, next) => {
-//res.sendFile(path.join(__dirname, "build", "index.html"))
-})
+	
+/* ====== Middleware  ====== */ 
+//(app.use)
 
 
-/* ====  Server Listener  ==== */
-app.listen(config.PORT, () => {
-	console.log(
-		`reaxion is live at http://localhost:${config.PORT}.`
-	);
-})
+/* ====== System Variables  ====== */
+const PORT = 4000; // full caps signify a config variable
+
+/* ====== App Configuration  ====== */
+// app.set
+
+
+/* ====== Routes  ====== */
+
+	
+/* ====== Server bind  ====== */
+// bind the application to the port via app.listen(number, optional function to do after bind)
+app.listen(PORT, function () {
+	console.log(` http://localhost:${PORT}`);
+});
