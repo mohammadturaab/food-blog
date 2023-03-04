@@ -6,8 +6,8 @@ Getting Started
 
 ## Prerequisites
 
-* [Node.js] (https://nodejs.org/en/download/)
-* [npm] (https://docs.npmjs.com/getting-started)
+* Node.js (https://nodejs.org/en/download/)
+* npm (https://docs.npmjs.com/getting-started)
 
 Installation
 
@@ -54,4 +54,4 @@ npm run start:client
 
 License
 
-This project is licensed under the [MIT License] (https://opensource.org/license/mit/).
+This project is licensed under the MIT License.
