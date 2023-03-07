@@ -1,9 +1,10 @@
-
+import Post from "../src/components/Posts/postcreate";
 
 function App() {
   return (
     <div>
       <h1>FOOD BLOG</h1>
+      <Post/>
     </div>
   );
 }

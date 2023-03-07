@@ -1,4 +1,4 @@
-import client from "./axios.config.js"
+import client from "./axios.config"
 
 const post = '/post';
 
