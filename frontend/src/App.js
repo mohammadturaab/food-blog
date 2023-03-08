@@ -1,10 +1,12 @@
-import Post from "./components/Posts/postcreate";
+import PostShow from "./components/Posts/post";
+import PostCreate from "./components/Posts/postcreate";
 
 function App() {
   return (
     <div>
       <h1>FOOD BLOG</h1>
-      <Post/>
+      <PostCreate/>
+      <PostShow/>
     </div>
   );
 }
