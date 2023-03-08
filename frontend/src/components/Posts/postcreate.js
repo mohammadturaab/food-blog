@@ -8,7 +8,6 @@ const PostCreate = ({createPost}) => {
         let newPost = {content};
         let res = await postService.create(newPost).then(() => {
             setContent("");
-            createPost();
             console.log(newPost);
         });
         if (!res === 201) {

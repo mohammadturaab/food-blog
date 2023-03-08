@@ -1,5 +1,5 @@
 const router = require('express').Router();
 
-router.use('/post', require('./post'));
+router.use('/', require('./post'));
 
 module.exports =  router;

@@ -12,7 +12,7 @@ const index = (req, res) => {
 
 const create = (req, res) => {
     let incomingReq ={
-        content: req.body.contect,
+        content: req.body.content,
     }
     db.Post.create(
         incomingReq,
@@ -24,7 +24,8 @@ const create = (req, res) => {
                 })
             } else {
                 return res.status(200).json({
-                    message: "Success"
+                    message: "Success" + incomingReq
+
                 })
             }
         }

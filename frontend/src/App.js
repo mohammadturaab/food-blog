@@ -1,4 +1,4 @@
-import Post from "../components/Posts/postcreate";
+import Post from "./components/Posts/postcreate";
 
 function App() {
   return (
