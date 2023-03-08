@@ -41,6 +41,6 @@ app.use((req, res, next) => {
 // bind the application to the port via app.listen(number, optional function to do after bind)
 
 app.listen(config.PORT, function (){
-    console.log(`server started on port ${PORT}`)
+    console.log('server started on port ' + config.PORT);
 });
 
