@@ -8,7 +8,9 @@ const PostShow = () => {
         async function getPost() {
             const post = await 
             postService.show();
+            console.log(post)
                 setPost(post.data);
+                
 
         }
         getPost();
@@ -16,7 +18,7 @@ const PostShow = () => {
 
     return (
         <div>
-            <p>{post.post}</p>
+            <p>{post}</p>
         </div>
     )
 

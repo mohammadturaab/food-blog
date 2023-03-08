@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as postService from "../../api/post.service"
 
-const PostCreate = ({createPost}) => {
+const PostCreate = () => {
     const [content, setContent] = useState("");
 
     const handleSubmit = async () => {
