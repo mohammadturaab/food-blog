@@ -4038,6 +4038,13 @@
     "tree-kill" "^1.2.2"
     "yargs" "^17.3.1"
 
+"config@^3.3.9":
+  "integrity" "sha512-G17nfe+cY7kR0wVpc49NCYvNtelm/pPy8czHoFkAgtV1lkmcp7DHtWCdDu+C9Z7gb2WVqa9Tm3uF9aKaPbCfhg=="
+  "resolved" "https://registry.npmjs.org/config/-/config-3.3.9.tgz"
+  "version" "3.3.9"
+  dependencies:
+    "json5" "^2.2.3"
+
 "confusing-browser-globals@^1.0.11":
   "integrity" "sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA=="
   "resolved" "https://registry.npmjs.org/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz"
@@ -6903,7 +6910,7 @@
   dependencies:
     "minimist" "^1.2.0"
 
-"json5@^2.1.2", "json5@^2.2.0", "json5@^2.2.2":
+"json5@^2.1.2", "json5@^2.2.0", "json5@^2.2.2", "json5@^2.2.3":
   "integrity" "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg=="
   "resolved" "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   "version" "2.2.3"
