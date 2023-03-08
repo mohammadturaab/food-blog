@@ -1,12 +1,9 @@
-/* ====== External Modules  ====== */
-// Required External Modules
-// all required code that is not our own
 const path = require('path');
 require("dotenv").config({path: "../.env"})
+
 /* ==== External Modules ==== */
 const express = require('express');
 const cors = require('cors');
-
 
 /* ====== Internal Modules  ====== */
 // Required Internal Modules
@@ -14,20 +11,20 @@ const cors = require('cors');
 
 
 /* ====== Instanced Module  ====== */
-// Create the Express app
 const app = express();
 const routes = require("./routes");
-// returns an object that is our server
 
+/* ==== Configuration ==== */
+const config = require("@food-blog/config");
 	
 /* ====== Middleware  ====== */ 
 //(app.use)
 app.use(express.static(path.join("build")))
+app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.use(cors())
 
 /* ====== System Variables  ====== */
-const PORT = 4000; // full caps signify a config variable
 
 /* ====== App Configuration  ====== */
 // app.set
@@ -35,11 +32,15 @@ const PORT = 4000; // full caps signify a config variable
 
 /* ====== Routes  ====== */
 app.use("/api", routes);
+
+app.use((req, res, next) => {
+	res.sendFile(path.join(__dirname, "build", "index.html"))
+})
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)
 
-app.listen(PORT, function (){
+app.listen(config.PORT, function (){
     console.log(`server started on port ${PORT}`)
 });
 
